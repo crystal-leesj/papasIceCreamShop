@@ -1,0 +1,53 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+html {
+  width: 960px;
+  /* I intially choose these two fonts for our main fonts. */
+  /* font-family: 'EB Garamond', serif; */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navigation-bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navigation-bar li {
+  float: left;
+}
+
+.navigation-bar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navigation-bar li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.navigation-bar .active {
+  background-color: #4CAF50;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 960px;
+  background-color: #333;
+  color: white;
+  text-align: center;
+}
+
+.footer li {
+  display: inline-block;
+  padding: 14px 16px;
+}
