@@ -20,13 +20,13 @@ function Shop(location, address, phone, hours) {
   this.phone = phone;
   this.hours = hours;
   this.flavors = [];
-  this.getFlavor();
+  // this.getFlavor();
 }
 
-Shop.prototype.getFlavor = function(){
-  this.flavors.push(saltedCaremel);
-  this.flavors.push(honeylavender);
-};
+// Shop.prototype.getFlavor = function(){
+//   this.flavors.push(saltedCaremel);
+//   this.flavors.push(honeylavender);
+// };
 
 var southLakeUnion = new Shop('South Lake Union', '590 Terry Ave N, Seattle, WA 98109', '(206) 995-8296', '7AM - 3PM');
 console.log('southLakeUnion :', southLakeUnion);

@@ -4,5 +4,44 @@
 }
 
 html {
-  width: 960px;
+  width: 960px; 
 }
+
+#flavors {
+  column-width: 400px;
+  list-style-type: none;
+}
+
+
+#flavors li img {
+  margin: 20px;
+  border-radius: 8px;
+  opacity: 1;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+#flavors li p {
+  margin-left: 20px;
+  font-size: 1.2em;
+}
+
+#flavors li button {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  border: 2px solid #e7e7e7;
+  padding: 5px 10px;
+  float: right;
+  margin-right: 140px;
+  margin-top: -25px;
+  
+}
+
+#flavors li button:hover {
+  background-color: gray; /* Green */
+  color: white;
+  border: 2px solid #e7e7e7;
+}
+
+
