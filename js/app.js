@@ -16,6 +16,8 @@ function IceCream(name, description, ingredients, isVegan, price, imgUrl) {
 
 // Array to store all the ice creams
 IceCream.allIceCreams = [];
+// Global variable to store all the special flavors
+var specialFlavors = [];
 
 // Shop constructor
 function Shop(location, address, phone, hours) {
@@ -34,7 +36,8 @@ Shop.prototype.getFlavor = function(){
 };
 
 function addSpecialFlavor(shopLocation) {
-  shopLocation.flavors.push(freshMint);
+  var randomIndex = Math.floor(Math.random() * specialFlavors.length);
+  shopLocation.flavors.push(specialFlavors[randomIndex]);
 }
 
 // Create an Ice Cream
@@ -51,10 +54,13 @@ var capitolHill = new Shop('Capitol Hill', '1400 12th Ave, Seattle, WA 98122', '
 var belltown = new Shop('Belltown', '2101 7th Ave, Seattle, WA 98119', '(206) 900-8770', '10AM - 10PM');
 
 // Special flavor
-var freshMint = new IceCream('Fresh Mint', 'Like those Girl Scout cookies everyone loves, but with ice cream. We use locally grown heirloom mint and house-baked cookies, of course!', 'Rbst-free fresh cream & milk, organic sugar, Rbst-free dry milk, egg yolks, fresh organic mint, natural peppermint oil, locust bean gum.', false, 10.50, 'https://place-hold.it/300x300/#00000/#fffff');
-
+var freshMint = new IceCream('Fresh Mint', 'Like those Girl Scout cookies everyone loves, but with ice cream. We use locally grown heirloom mint and house-baked cookies, of course!', 'Rbst-free fresh cream & milk, organic sugar, Rbst-free dry milk, egg yolks, fresh organic mint, natural peppermint oil, locust bean gum.', true, 11.50, 'https://place-hold.it/300x300/#00000/#fffff');
+var butterscotch = new IceCream('Butterscotch', 'We’ve brought these classic flavors into the 21st century with a rich & creamy real butterscotch sauce.', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, butterscotch (light brown sugar, heavy cream, unsalted butter, vanilla extract), natural butterscotch extract, sea salt, locust bean gum', false, 10.50, 'https://place-hold.it/300x300/#00000/#fffff');
+specialFlavors.push(freshMint);
+specialFlavors.push(butterscotch);
 
 addSpecialFlavor(belltown);
+addSpecialFlavor(southLakeUnion);
 
 console.log('belltown :', belltown);
 console.log('southLakeUnion :', southLakeUnion);
