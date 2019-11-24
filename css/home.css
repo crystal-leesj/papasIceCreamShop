@@ -1,53 +1,116 @@
 * {
   box-sizing: border-box;
   margin: 0 auto;
-}
+  }
 
 html {
-  width: 960px;
+  width: 1000px;
   /* I intially choose these two fonts for our main fonts. */
   /* font-family: 'EB Garamond', serif; */
   font-family: 'Open Sans', sans-serif;
+  background-color:#FCC5C0;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 60px;
+  -webkit-text-fill-color:whitesmoke;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color:#7BCCC4;
+}
+
+.navigation-bar{
+  height: 400px;
+  width: 100%;
 }
 
 .navigation-bar ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333;
+  margin-top:3em;
+  display: inline-flex;
+
 }
 
 .navigation-bar li {
+  margin-right:2em;
   float: left;
+  width:60%;
+
 }
 
-.navigation-bar li a {
-  display: block;
+
+.navigation-bar div{
+
+ position: relative;
+ bottom:2em;
+}  
+
+.navigation-bar img{
+width: 80%;
+
+}
+
+.navigation-bar li a { 
+  /* display: block; */
+  /* margin-left: 1px; */
   color: white;
-  text-align: center;
-  padding: 14px 16px;
+  /* text-align: center;
+  padding: 12px 12px; */
   text-decoration: none;
 }
 
+
 .navigation-bar li a:hover:not(.active) {
-  background-color: #111;
+  color:#7BCCC4;
+} 
+
+footer{
+  margin-top: 22em;
+  position:relative;
+  text-align:center;
+
 }
 
-.navigation-bar .active {
-  background-color: #4CAF50;
+.footerlogo img{
+  position:absolute;
+  bottom:0;
+  border-left: 2px solid #FCC5C0;
+  border-right: 2px solid #FCC5C0;
+  bottom: 0px;
+  top:3px;
+
 }
 
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 960px;
-  background-color: #333;
-  color: white;
-  text-align: center;
+footer:before {
+  border-top: 1px solid #ccc;
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  z-index: -1;
 }
 
-.footer li {
+
+.footerElement img {
+  /* float:right; */
+  margin-top: 30px;
+  margin-right: 2px;
+  margin-left: 2px;
+  float:right;
+  padding:0px;
+  line-height: 50px;
+}
+
+.footerElement li {
   display: inline-block;
   padding: 14px 16px;
+} 
+
+.leftbox {
+  float:left;
+  margin-top:30px;
+  font-size:15px;
+  color:grey;
 }
