@@ -8,19 +8,19 @@ html {
   width: 960px;
 }
 
-body main {
+#menuContainer main {
   margin-bottom: 100px;
 }
 
-h2 {
+#menuContainer h2 {
   margin: 10px;
 }
 
-h4 {
+#menuContainer h4 {
   margin-left: 25px;
 }
 
-p {
+#menuContainer p {
   text-indent: 50px;
 }
 
