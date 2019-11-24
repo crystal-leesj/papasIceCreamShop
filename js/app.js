@@ -1,12 +1,13 @@
 'use strict';
 
 // Ice Cream constructor
-function IceCream(name, description, ingredients, isVegan, price) {
+function IceCream(name, description, ingredients, isVegan, price, imgUrl) {
   this.name = name;
   this.description = description;
   this.ingredients = ingredients;
   this.isVegan = isVegan;
   this.price = price;
+  this.imgUrl = imgUrl;
   // needs two methods.
   // get random icecream to display at home page
   // get pricing quote
@@ -19,21 +20,13 @@ function Shop(location, address, phone, hours) {
   this.phone = phone;
   this.hours = hours;
   this.flavors = [];
-  this.getFlavor();
+  // this.getFlavor();
 }
 
-Shop.prototype.getFlavor = function(){
-  this.flavors.push(saltedCaremel);
-  this.flavors.push(honeylavender);
-};
-
-
-// TEST - just hard coded
-var saltedCaremel = new IceCream('Salted Caremel', 'Sweet and salty – an unbeatable combination! Our salted caramel is made in-house using just 4 simple ingredients.', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, caramel (milk, cane sugar, vanilla bean, sea salt), locust bean gum.', false, 9.50);
-console.log('saltedCaremel :', saltedCaremel);
-
-var honeylavender = new IceCream('Honey Lavender', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, 9.00);
-console.log('honeylavender :', honeylavender);
+// Shop.prototype.getFlavor = function(){
+//   this.flavors.push(saltedCaremel);
+//   this.flavors.push(honeylavender);
+// };
 
 var southLakeUnion = new Shop('South Lake Union', '590 Terry Ave N, Seattle, WA 98109', '(206) 995-8296', '7AM - 3PM');
 console.log('southLakeUnion :', southLakeUnion);
@@ -50,8 +43,5 @@ function addSpecialFlavor(shopLocation) {
   var freshMint = new IceCream('Fresh Mint', 'Like those Girl Scout cookies everyone loves, but with ice cream. We use locally grown heirloom mint and house-baked cookies, of course!', 'Rbst-free fresh cream & milk, organic sugar, Rbst-free dry milk, egg yolks, fresh organic mint, natural peppermint oil, locust bean gum.', false, 10.50);
   shopLocation.flavors.push(freshMint);
 }
-
-addSpecialFlavor(belltown);
-console.log('belltown :', belltown);
 
 
