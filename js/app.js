@@ -38,10 +38,10 @@ var belltown = new Shop('Belltown', '2101 7th Ave, Seattle, WA 98119', '(206) 90
 console.log('belltown :', belltown);
 
 
-function addSpecialFlavor(shopLocation) {
-  console.log('***belltown :', shopLocation.flavors);
-  var freshMint = new IceCream('Fresh Mint', 'Like those Girl Scout cookies everyone loves, but with ice cream. We use locally grown heirloom mint and house-baked cookies, of course!', 'Rbst-free fresh cream & milk, organic sugar, Rbst-free dry milk, egg yolks, fresh organic mint, natural peppermint oil, locust bean gum.', false, 10.50);
-  shopLocation.flavors.push(freshMint);
-}
+// function addSpecialFlavor(shopLocation) {
+//   console.log('***belltown :', shopLocation.flavors);
+//   var freshMint = new IceCream('Fresh Mint', 'Like those Girl Scout cookies everyone loves, but with ice cream. We use locally grown heirloom mint and house-baked cookies, of course!', 'Rbst-free fresh cream & milk, organic sugar, Rbst-free dry milk, egg yolks, fresh organic mint, natural peppermint oil, locust bean gum.', false, 10.50);
+//   shopLocation.flavors.push(freshMint);
+// }
 
 
