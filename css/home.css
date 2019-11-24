@@ -22,7 +22,7 @@ h1{
 
 .navigation-bar{
   height: 400px;
-  width: 300%
+  width: 100%;
 }
 
 .navigation-bar ul {
@@ -113,7 +113,4 @@ footer:before {
   margin-top:30px;
   font-size:15px;
   color:grey;
-
 }
-
- 
