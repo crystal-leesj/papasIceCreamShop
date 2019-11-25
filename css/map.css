@@ -3,6 +3,120 @@
   margin: 0 auto;
 }
 
+html, body, #map {
+  height: 90%;
+  width: 1000px;
+}
+
 html {
-  width: 960px;
+  width: 1000px;
+  /* I intially choose these two fonts for our main fonts. */
+  /* font-family: 'EB Garamond', serif; */
+  font-family: 'Open Sans', sans-serif;
+  background-color:#FCC5C0;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 60px;
+  -webkit-text-fill-color:whitesmoke;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color:#7BCCC4;
+}
+
+.navigation-bar{
+  height: 200px;
+  width: 100%;
+}
+
+.navigation-bar ul {
+  list-style-type: none;
+  margin-top:3em;
+  display: inline-flex;
+
+}
+
+.navigation-bar li {
+  margin-right:2em;
+  float: left;
+  width: 10%;
+
+}
+
+
+.navigation-bar div{
+
+ position: relative;
+ bottom:2em;
+}  
+
+.navigation-bar img{
+width: 150%;
+
+}
+
+.navigation-bar li a { 
+  /* display: block; */
+  /* margin-left: 1px; */
+  color: white;
+  /* text-align: center;
+  padding: 12px 12px; */
+  text-decoration: none;
+}
+
+
+.navigation-bar li a:hover:not(.active) {
+  color:#7BCCC4;
+} 
+
+
+footer{
+  margin-top: 22em;
+  position:relative;
+  text-align:center;
+
+}
+
+.footerlogo img{
+  position:absolute;
+  bottom:0;
+  border-left: 2px solid #FCC5C0;
+  border-right: 2px solid #FCC5C0;
+  bottom: 0px;
+  top:3px;
+
+}
+
+footer:before {
+  border-top: 1px solid #ccc;
+  content: "";
+  width: 100%;
+  position: absolute;
+  top: 25px;
+  left: 0px;
+  z-index: -1;
+}
+
+
+.footerElement img {
+  /* float:right; */
+  margin-top: 30px;
+  margin-right: 2px;
+  margin-left: 2px;
+  float:right;
+  padding:0px;
+  line-height: 50px;
+}
+
+.footerElement li {
+  display: inline-block;
+  padding: 14px 16px;
+} 
+
+.leftbox {
+  float:left;
+  margin-top:30px;
+  font-size:15px;
+  color:grey;
 }
