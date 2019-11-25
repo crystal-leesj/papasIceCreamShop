@@ -29,7 +29,7 @@ function Shop(location, address, phone, hours) {
   this.getFlavor();
 }
 
-Shop.prototype.getFlavor = function(){
+Shop.prototype.getFlavor = function () {
   for (var i = 0; i < IceCream.allIceCreams.length; i++) {
     this.flavors.push(IceCream.allIceCreams[i]);
   }
@@ -58,7 +58,7 @@ var freshMint = new IceCream('Fresh Mint', 'Like those Girl Scout cookies everyo
 var butterscotch = new IceCream('Butterscotch', 'We’ve brought these classic flavors into the 21st century with a rich & creamy real butterscotch sauce.', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, butterscotch (light brown sugar, heavy cream, unsalted butter, vanilla extract), natural butterscotch extract, sea salt, locust bean gum', false, 10.50, 'https://place-hold.it/300x300/#00000/#fffff');
 specialFlavors.push(freshMint);
 specialFlavors.push(butterscotch);
-
+  
 addSpecialFlavor(belltown);
 addSpecialFlavor(southLakeUnion);
 
