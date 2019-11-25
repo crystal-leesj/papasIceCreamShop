@@ -30,7 +30,7 @@ function Shop(location, address, phone, hours) {
   this.getFlavor();
 }
 
-Shop.prototype.getFlavor = function(){
+Shop.prototype.getFlavor = function () {
   for (var i = 0; i < IceCream.allIceCreams.length; i++) {
     this.flavors.push(IceCream.allIceCreams[i]);
   }
@@ -72,7 +72,6 @@ var stickMango = new IceCream('Sticky Mango', 'Inspired by Spring days in Portla
 var ubeOrio = new IceCream('Ube Cookies N Cream', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/ube-orio.jpg');
 specialFlavors.push(stickMango);
 specialFlavors.push(ubeOrio);
-
 addSpecialFlavor(belltown);
 addSpecialFlavor(southLakeUnion);
 
