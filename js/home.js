@@ -8,7 +8,7 @@ function getImage (){
   return img;
 }
 function renderImage () {
-  var imgElem = document.getElementById("random_image");
+  var imgElem = document.getElementById('random_image');
   imgElem.setAttribute('src', getImage());
 }
 renderImage();
