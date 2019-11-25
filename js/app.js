@@ -75,7 +75,7 @@ specialFlavors.push(ubeOrio);
 addSpecialFlavor(belltown);
 addSpecialFlavor(southLakeUnion);
 
-console.log('belltown :', belltown);
-console.log('southLakeUnion :', southLakeUnion);
-console.log('capitolHill :', capitolHill);
+// console.log('belltown :', belltown);
+// console.log('southLakeUnion :', southLakeUnion);
+// console.log('capitolHill :', capitolHill);
 
