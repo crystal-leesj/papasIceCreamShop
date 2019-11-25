@@ -21,7 +21,7 @@ h1{
 }
 
 .navigation-bar{
-  height: 400px;
+ display: inline-flex;
   width: 100%;
 }
 
@@ -67,7 +67,7 @@ width: 80%;
 
 
 footer{
-  margin-top: 22em;
+  margin-top: 2em;
   position:relative;
   text-align:center;
 
