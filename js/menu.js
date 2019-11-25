@@ -2,7 +2,7 @@
 
 var parentElement = document.getElementById('flavors');
 
-console.log('***allIceCreams : ', IceCream.allIceCreams);
+// console.log('***allIceCreams : ', IceCream.allIceCreams);
 
 // IceCream.flavors = []; // Store all flavors here (**Note** Should I store in Shop.flavor???)
 
@@ -36,7 +36,7 @@ function displayMenu() {
     var li = document.createElement('li');
     var flavorImg = document.createElement('img');
     var flavorName = document.createElement('h4');
-    var flavorDescription = document.createElement('p');
+    // var flavorDescription = document.createElement('p');
     var submitBtn = document.createElement('button');
     submitBtn.id = 'submitBtn';
 
@@ -47,8 +47,8 @@ function displayMenu() {
     flavorName.textContent = IceCream.allIceCreams[i].name;
     submitBtn.innerHTML = 'Add To Cart';
     li.appendChild(submitBtn);
-    li.appendChild(flavorDescription);
-    flavorDescription.textContent = IceCream.allIceCreams[i].description;
+    // li.appendChild(flavorDescription);
+    // flavorDescription.textContent = IceCream.allIceCreams[i].description;
   }
 }
 
