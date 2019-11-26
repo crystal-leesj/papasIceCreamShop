@@ -9,11 +9,36 @@ html {
 
 table {
   margin: 0 auto;
-  width: 300px;
+  width: 500px;
 }
 
 table, th, td {
-  border: 1px solid black;
+  border: 1px solid #727b7e;
   border-collapse: collapse;
   text-align: center;
+  color: white;
+}
+
+th, td {
+  padding: 15px;
+}
+
+th {
+  height: 70px;
+  background-color: rgb(90, 197, 188);
+  font-size: 2em;
+}
+
+tr:nth-child(even) {
+  background-color: #a2abad;
+}
+/* tr:nth-child(odd){
+  background-color: #c1b2c5;
+} */
+tr:last-child {
+  background-color: #52b462;
+}
+
+#discount {
+  background-color: rgb(211, 86, 86);
 }
