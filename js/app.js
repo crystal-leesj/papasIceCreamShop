@@ -48,22 +48,18 @@ new IceCream('Green Tea', 'Inspired by Spring days in Portland when flowers pop 
 
 new IceCream('Himalayan Salted Caramel', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/himalayan-salted-caramel.jpg');
 
-new IceCream('Honey Dew', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false,  false, 9.00, 'img/honey-dew.jpg');
+new IceCream('Honey Dew', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/honey-dew.jpg');
 
-new IceCream('Pumpkin Cobbler', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false,  false, 9.00, 'img/pumpkin-cobbler.jpg');
+new IceCream('Pumpkin Cobbler', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/pumpkin-cobbler.jpg');
 
 new IceCream('Quadruple Chocolate', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false,9.00, 'img/quadruple-chocolate.jpg');
-
-
-
-
 
 
 
 // Create a Shop
 var southLakeUnion = new Shop('South Lake Union', '590 Terry Ave N, Seattle, WA 98109', '(206) 995-8296', '7AM - 3PM');
 
-var capitolHill = new Shop('Capitol Hill', '1400 12th Ave, Seattle, WA 98122', ' (206) 420-4587', '1PM - 11PM');
+new Shop('Capitol Hill', '1400 12th Ave, Seattle, WA 98122', ' (206) 420-4587', '1PM - 11PM');
 
 var belltown = new Shop('Belltown', '2101 7th Ave, Seattle, WA 98119', '(206) 900-8770', '10AM - 10PM');
 
@@ -78,4 +74,34 @@ addSpecialFlavor(southLakeUnion);
 // console.log('belltown :', belltown);
 // console.log('southLakeUnion :', southLakeUnion);
 // console.log('capitolHill :', capitolHill);
+
+
+function Cart(items) {
+  this.items = items;
+}
+
+Cart.prototype.addItem = function(flavor) {
+  for (var i = 0; i < IceCream.allIceCreams.length; i++) {
+    if (flavor === IceCream.allIceCreams[i].name) {
+      var price = IceCream.allIceCreams[i].price;
+      var newCartItem = new CartItem(flavor, price);
+      console.log('newCartItem: ',newCartItem);
+    }
+  }
+
+  this.items.push(newCartItem);
+  console.log('items :', this.items);
+};
+
+
+Cart.prototype.saveToLocalStorage = function() {
+  var cartJSON = JSON.stringify(this.items);
+  localStorage.setItem('data', cartJSON);
+};
+
+
+function CartItem(flavor, price) {
+  this.flavor = flavor;
+  this.price = price;
+}
 
