@@ -53,7 +53,6 @@ function mouseOverHandler(e) {
   if(descriptionElem)
   {
     descriptionElem.setAttribute('style', 'display: block;');
-
   }
 }
 
@@ -65,7 +64,6 @@ function mouseOutHandler(e) {
   if(descriptionElem)
   {
     descriptionElem.setAttribute('style', 'display: none;');
-
   }
 }
 
@@ -76,10 +74,8 @@ for(var i = 0; i < arrayOfImages.length; i++){
   arrayOfImages[i].addEventListener('mouseout', mouseOutHandler);
 
 }
-
 // document.getElementsByClassName('image').addEventListener('mouseover', mouseOverHandler);
 // document.getElementsByClassName('image').addEventListener('mouseout', mouseOutHandler);
-
 
 function addToCartBtnHandler() {
   alert('Added to cart:');

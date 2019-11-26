@@ -46,7 +46,7 @@ new IceCream('Ferrero Rocher', 'Rich and creamy Nutella ice cream loaded with nu
 
 new IceCream('Green Tea', 'One of our staple flavors, simple and we have mastered this green tea recipe', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/green-tea.jpg');
 
-new IceCream('Himalayan Salted Caramel', 'Our own twist of the classic Salted Caramel, using Pink Himalayan Salt for more balanced between sweet and salty', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/himalayan-salted-caramel.jpg');
+new IceCream('Himalayan Salted Caramel', 'Our own twist of the classic Salted Caramel, using Himalayan Salt for more balanced between sweet and salty', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/himalayan-salted-caramel.jpg');
 
 new IceCream('Honey Dew Mint', 'Our most popular summer flavor, a refreshing melon flavor with a slight hint of mint', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false,  false, 9.00, 'img/honey-dew.jpg');
 
