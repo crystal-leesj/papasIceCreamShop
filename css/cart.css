@@ -6,3 +6,14 @@
 html {
   width: 960px;
 }
+
+table {
+  margin: 0 auto;
+  width: 300px;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+}

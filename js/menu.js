@@ -1,60 +1,56 @@
 'use strict';
 
+// eslint-disable-next-line no-undef
+var shoppingCart = new Cart([]);
+
 var parentElement = document.getElementById('flavors');
-
-console.log('***allIceCreams : ', IceCream.allIceCreams);
-
-// IceCream.flavors = []; // Store all flavors here (**Note** Should I store in Shop.flavor???)
-
-// //// Will change the flavors later according to the image that I will get
-
-// IceCream.flavors.push(new IceCream('Flavor', 'Organic vanilla ice cream infused with hot fudge and huge chunk of brownie pieces', 'Vanilla Ice Cream, Fudge, Brownies', false, 8.99, 'https://place-hold.it/300x300/#00000/#fffff'));
-
-// IceCream.flavors.push(new IceCream('Flavor', 'Organic vanilla ice cream infused with hot fudge and huge chunk of brownie pieces', 'Vanilla Ice Cream, Fudge, Brownies', false, 8.99, 'https://place-hold.it/300x300/#00000/#fffff'));
-
-// IceCream.flavors.push(new IceCream('Flavor', 'Organic vanilla ice cream infused with hot fudge and huge chunk of brownie pieces', 'Vanilla Ice Cream, Fudge, Brownies', false, 8.99, 'https://place-hold.it/300x300/#00000/#fffff'));
-
-// IceCream.flavors.push(new IceCream('Flavor', 'Organic vanilla ice cream infused with hot fudge and huge chunk of brownie pieces', 'Vanilla Ice Cream, Fudge, Brownies', false, 8.99, 'https://place-hold.it/300x300/#00000/#fffff'));
-
-// IceCream.flavors.push(new IceCream('Flavor', 'Organic vanilla ice cream infused with hot fudge and huge chunk of brownie pieces', 'Vanilla Ice Cream, Fudge, Brownies', false, 8.99, 'https://place-hold.it/300x300/#00000/#fffff'));
-
-// IceCream.flavors.push(new IceCream('Flavor', 'Organic vanilla ice cream infused with hot fudge and huge chunk of brownie pieces', 'Vanilla Ice Cream, Fudge, Brownies', false, 8.99, 'https://place-hold.it/300x300/#00000/#fffff'));
-
-// IceCream.flavors.push(new IceCream('Flavor', 'Organic vanilla ice cream infused with hot fudge and huge chunk of brownie pieces', 'Vanilla Ice Cream, Fudge, Brownies', false, 8.99, 'https://place-hold.it/300x300/#00000/#fffff'));
-
-// IceCream.flavors.push(new IceCream('Flavor', 'Organic vanilla ice cream infused with hot fudge and huge chunk of brownie pieces', 'Vanilla Ice Cream, Fudge, Brownies', false, 8.99, 'https://place-hold.it/300x300/#00000/#fffff'));
-
-// Function Invocation
-
-displayMenu();
-
-//Global Function
+var addToCartBtns = document.getElementsByClassName('addToCartBtn');
 
 // Display all the flavor stored in an array to the page
 function displayMenu() {
-  for(var i = 0; i < IceCream.allIceCreams.length; i++) {
+  // eslint-disable-next-line no-undef
+  for (var i = 0; i < IceCream.allIceCreams.length; i++) {
     var li = document.createElement('li');
     var flavorImg = document.createElement('img');
-    var flavorName = document.createElement('h4');
     var flavorDescription = document.createElement('p');
-    var submitBtn = document.createElement('button');
-    submitBtn.id = 'submitBtn';
+    var flavorName = document.createElement('h4');
+    var addToCartBtn = document.createElement('INPUT');
+    addToCartBtn.setAttribute('type', 'button');
+    addToCartBtn.setAttribute('value', 'Add To Cart');
+    addToCartBtn.className = 'addToCartBtn';
+    // eslint-disable-next-line no-undef
+    addToCartBtn.id = `${IceCream.allIceCreams[i].name}`;
+
 
     parentElement.appendChild(li);
     li.appendChild(flavorImg);
+    li.appendChild(flavorDescription);
+    // eslint-disable-next-line no-undef
     flavorImg.src = IceCream.allIceCreams[i].imgUrl;
     li.appendChild(flavorName);
+    // eslint-disable-next-line no-undef
     flavorName.textContent = IceCream.allIceCreams[i].name;
-    submitBtn.innerHTML = 'Add To Cart';
-    li.appendChild(submitBtn);
-    li.appendChild(flavorDescription);
-    flavorDescription.textContent = IceCream.allIceCreams[i].description;
+    li.appendChild(addToCartBtn);
   }
 }
 
-/// Will improve this later
-function addToCartBtnHandler() {
-  alert('Added to cart');
+
+function addToCartBtnHandler(event) {
+  event.preventDefault();
+  var iceCreamName = event.target.id;
+  shoppingCart.addItem(iceCreamName);
+  console.log('shoppingCart :', shoppingCart);
+  shoppingCart.saveToLocalStorage();
 }
 
-document.getElementById('submitBtn').addEventListener('click', addToCartBtnHandler);
+// ref: https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
+for(var i = 0; i < addToCartBtns.length; i++) {
+  addToCartBtns[i].addEventListener('click', addToCartBtnHandler, false);
+}
+
+var iceCreamForm = document.getElementById('iceCreamForm');
+iceCreamForm.addEventListener('submit', addToCartBtnHandler);
+
+
+displayMenu();
+
