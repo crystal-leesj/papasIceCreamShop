@@ -43,6 +43,22 @@ function addToCartBtnHandler(event) {
   shoppingCart.saveToLocalStorage();
 }
 
+var arrayOfImages = document.getElementsByClassName('image');
+
+for(var i = 0; i < arrayOfImages.length; i++){
+  arrayOfImages[i].addEventListener('mouseover', mouseOverHandler);
+  arrayOfImages[i].addEventListener('mouseout', mouseOutHandler);
+
+}
+
+
+function addToCartBtnHandler() {
+  alert('Added to cart:');
+  console.log('event.target:', event.target);
+}
+
+var addToCartBtns = document.getElementsByClassName('addToCartBtn');
+
 // ref: https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
 for(var i = 0; i < addToCartBtns.length; i++) {
   addToCartBtns[i].addEventListener('click', addToCartBtnHandler, false);
