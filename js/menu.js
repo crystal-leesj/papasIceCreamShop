@@ -47,9 +47,8 @@ function addToCartBtnHandler(event) {
 for(var i = 0; i < addToCartBtns.length; i++) {
   addToCartBtns[i].addEventListener('click', addToCartBtnHandler, false);
 }
-
 var iceCreamForm = document.getElementById('iceCreamForm');
-iceCreamForm.addEventListener('submit', addToCartBtnHandler);
+iceCreamForm.addEventListener('click', addToCartBtnHandler);
 
 
 displayMenu();

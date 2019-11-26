@@ -25,16 +25,27 @@ function displayCart() {
   var titleTr = addElement('tr', tableElem);
   addElement('th', titleTr, 'Ice Cream');
   addElement('th', titleTr, 'Price');
-  for (var i = 0; i < shoppingCart.items.length; i++) {
-    var contentTr = addElement('tr', tableElem);
-    addElement('td', contentTr, `${shoppingCart.items[i].flavor}`);
-    addElement('td', contentTr, '$'+`${shoppingCart.items[i].price}`);
-    totalPrice += shoppingCart.items[i].price;
+  console.log('shoppingCart.items.length:', shoppingCart.items.length);
+  if (shoppingCart.items.length === 0) {
+    var noneTotalTr = addElement('tr', tableElem);
+    addElement('td', totalTr, 'Total Price');
+    addElement('td', totalTr, '$0' + noneTotalTr);
+  } else {
+    for (var i = 0; i < shoppingCart.items.length; i++) {
+      var contentTr = addElement('tr', tableElem);
+      addElement('td', contentTr, `${shoppingCart.items[i].flavor}`);
+      addElement('td', contentTr, '$'+`${shoppingCart.items[i].price}`);
+      totalPrice += shoppingCart.items[i].price;
+    }
+    var totalTr = addElement('tr', tableElem);
+    addElement('td', totalTr, 'Total Price');
+    addElement('td', totalTr, '$' + totalPrice);
   }
-  var totalTr = addElement('tr', tableElem);
-  addElement('td', totalTr, 'Total Price');
-  addElement('td', totalTr, '$' + totalPrice);
 }
 
-getLocalStorage();
-displayCart();
+function renderCart() {
+  getLocalStorage();
+  displayCart();
+}
+
+renderCart();

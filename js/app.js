@@ -88,9 +88,7 @@ Cart.prototype.addItem = function(flavor) {
       console.log('newCartItem: ',newCartItem);
     }
   }
-
   this.items.push(newCartItem);
-  console.log('items :', this.items);
 };
 
 Cart.prototype.saveToLocalStorage = function() {
