@@ -17,9 +17,10 @@ function displayMenu() {
     var flavorDescription = document.createElement('p');
     var flavorName = document.createElement('h4');
     var addToCartBtn = document.createElement('INPUT');
-    imageDiv.id = 'imageDiv';
-    flavorImg.id = 'image';
-    flavorDescription.id = 'description';
+    imageDiv.id = 'imageDiv' + i;
+    flavorImg.id = 'imageID'
+    flavorImg.className = 'image';
+    flavorDescription.id = 'description' + i;
     addToCartBtn.setAttribute('type', 'submit');
     addToCartBtn.setAttribute('value', 'Add To Cart');
     addToCartBtn.className = 'addToCartBtn';
@@ -40,21 +41,35 @@ function displayMenu() {
     // flavorDescription.textContent = IceCream.allIceCreams[i].description;
   }
 
- 
-
 }
 
-function mouseOverHandler() {
-  document.getElementById('description').style.display = '';
+function mouseOverHandler(e) {
+  var iceCreamDescriptionNum = e.target.id.charAt(e.target.id.length - 1);
+  var descriptionId = 'description' + iceCreamDescriptionNum;
+  var descriptionElem = document.getElementById(descriptionId);
+  // console.log(descriptionId);
+  if(descriptionElem)
+  {
+    descriptionElem.setAttribute('style', 'display: block;');
+
+  }
 }
 
-function mouseOutHandler() {
-  document.getElementById('description').stype.display = 'none';
+function mouseOutHandler(e) {
+  var iceCreamDescriptionNum = e.target.id.charAt(e.target.id.length - 1);
+  var descriptionId = 'description' + iceCreamDescriptionNum;
+  var descriptionElem = document.getElementById(descriptionId);
+  console.log(descriptionId);
+  if(descriptionElem)
+  {
+    descriptionElem.setAttribute('style', 'display: none;');
+
+  }
 }
 
 
-document.getElementById('imageDiv').addEventListener('onmouseover', mouseOverHandler);
-document.getElementById('imageDiv').addEventListener('onmouseout', mouseOutHandler);
+document.getElementById('flavors').addEventListener('mouseover', mouseOverHandler);
+document.getElementById('flavors').addEventListener('mouseout', mouseOutHandler);
 
 
 

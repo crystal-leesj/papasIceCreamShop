@@ -29,14 +29,12 @@ html {
 }
 
 #flavors {
-  column-width: 400px;
+  column-width: 300px;
   list-style-type: none;
 }
 
-#imageDiv {
-  position: relative;
-}
-#image {
+
+.image {
   margin: 20px;
   border-radius: 8px;
   width: 300px;
@@ -46,12 +44,12 @@ html {
 #description {
   display: none;
   z-index: 100;
-  position: absolute;
+  position: relative;
   color: white;
   font-size:14px;
   font-weight: bold;
-  left: 150px;
-  top: 180px;
+  /* left: 150px;
+  top: 180px; */
 }
 
 #flavors li input {
@@ -87,7 +85,6 @@ section {
   padding: 15px;
   margin-top: 70px;
 }
-
 
 footer {
   margin-top: 100px;
