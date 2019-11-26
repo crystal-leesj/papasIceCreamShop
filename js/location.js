@@ -10,7 +10,10 @@ var dark  = L.tileLayer(Url, {id: 'mapbox.dark', maxZoom:18, attribution: attr})
   light   = L.tileLayer(Url, {id: 'mapbox.light', maxZoom:18, attribution: attr});
 
 var map = L.map('map', {
+
   zoomSnap: 0.5,
+
+
   layers:[light]}).fitWorld();
 var timelayers = {
   "Dark": dark,
@@ -33,21 +36,57 @@ else{
 //Buttons!!
 
 
+function infoFunction() {
+  alert('If you give it permission, this web page will access your location so you may see which Papas Ice Cream Store is closest to you!');
+}
+
+function locateFunction(){
+  if (navigator.geolocation) {
+    navigator.geolocation.showPosition(showPosition);
+    map.setView({
+      setView: true,
+      maxZoom: 16,
+      timeout: 15000,
+      watch: false,
+    })} else {
+    alert('User denied web page access to location.')
+  }
+}
+
+function showPosition(position){
+  alert('Your location: ' + position.coords.latitude + ', ' + position.coords.longitude)
+}
+
+
+
 //the below JS code takes advantage of the Geolocate API as it is incorporated in the Leaflet JS API with the locate method
 function onLocationFound(e) { //this function does three things if the location is found: it defines a radius variable, adds a circle to the map, and adds a popup to the map.
 
+
   var radius = e.accuracy / 10; //this defines a variable radius as the accuracy value returned by the locate method divided by 2. It is divided by 2 because the accuracy value is the sum of the estimated accuracy of the latitude plus the estimated accuracy of the longitude. The unit is meters.
+
+  var radius = e.accuracy / 2; //this defines a variable radius as the accuracy value returned by the locate method divided by 2. It is divided by 2 because the accuracy value is the sum of the estimated accuracy of the latitude plus the estimated accuracy of the longitude. The unit is meters.
+
   var r= radius.toFixed(2);
   var coordinates = e.latlng.lat + ", " + e.latlng.lng;
   var myIcon = L.icon({
     iconUrl: 'https://img.icons8.com/dusk/64/000000/ice-cream-in-waffle-cone.png',
+
     iconSize: [27, 47],
     popupAnchor: [-0.5, -16],
     shadowAnchor: [22, 94]
+
+    iconSize: [25, 65],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76],
+    shadowAnchor: [22, 94],
+    opacity: 0.5
+
   });
 
 
   L.marker(e.latlng).addTo(map)
+
     .bindPopup("You are within " + radius + " meters of this point!!");
   //this adds a Leaflet popup to the map at the lat and long returned by the locate function.
   L.marker([47.613200, -122.316595], {icon: myIcon}).addTo(map)
@@ -58,6 +97,19 @@ function onLocationFound(e) { //this function does three things if the location 
 
   L.marker([47.624425, -122.336591], {icon: myIcon}).addTo(map)
     .bindPopup("<b>Papa's Ice Cream in SLU</b> <br> 590 Terry Ave N <br> Seattle WA 98109 <br> Phone: (206) 995-8296 <br> Store Hours: 7AM - 3PM");
+
+
+    .bindPopup("You are within " + radius + " meters of this point." + "<br>" + e.latlng.lat + ", " + e.latlng.lng);
+  //this adds a Leaflet popup to the map at the lat and long returned by the locate function. The text of the popup is defined here as well. Please change this text to specify what unit the radius is reported in.
+  L.marker([47.612915, -122.316595], {icon: myIcon}).addTo(map)
+    .bindPopup("<b>Papa's Ice Cream in Capitol Hill</b> <br> Capitol Hill 1400 12th Ave <br> Seattle, WA 98122 <br> Phone: (206) 420-4587 <br> Store Hours: 1PM - 11PM");
+
+  L.marker([47.615679, -122.33900], {icon: myIcon}).addTo(map)
+    .bindPopup("<b>Papa's Ice Cream in Belltown</b> <br> 2101 7th Ave <br> Seattle, WA 98119 <br> Phone: (206) 900-8770 <br> Store Hours: 10AM - 10PM");
+
+  L.marker([47.624125, -122.336591], {icon: myIcon}).addTo(map)
+    .bindPopup("<b>Papa's Ice Cream in SLU</b> <br> 590 Terry Ave N <br> Seattle WA 98109 <br> Phone: (206) 995-8296 <br> Store Hours: 7AM - 3PM");
+  //L.circle(e.latlng, radius).addTo(map); // this adds a Leaflet circle to the map at the lat and long returned by the locate function. Its radius is set to the var radius defined above.
 
 
   /*if (radius < 30) {
