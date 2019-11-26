@@ -10,9 +10,6 @@ function IceCream(name, description, ingredients, isVegan, isSpecial, price, img
   this.imgUrl = imgUrl;
   this.isSpecial = isSpecial;
   IceCream.allIceCreams.push(this);
-  // needs two methods.
-  // get random icecream to display at home page
-  // get pricing quote
 }
 
 // Array to store all the ice creams
