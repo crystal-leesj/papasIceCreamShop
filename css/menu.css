@@ -5,7 +5,7 @@
 
 html {
   width: 960px;
-}
+}background
 
 .navigation-bar {
   height: 180px;
@@ -32,7 +32,7 @@ html {
   column-width: 300px;
   height: 1490px;
   list-style-type: none;
-}
+}background
 
 
 .image {
@@ -94,9 +94,14 @@ section {
   float: right;
   border-radius: 8px;
   padding: 15px;
-  margin-top: 100px;
+ 
+table {
+  margin: 0 auto;
+  width: 300px;
 }
 
-footer {
-  margin-top: 100px;
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
 }
