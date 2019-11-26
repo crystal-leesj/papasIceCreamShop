@@ -9,7 +9,7 @@ html, body, #map {
 }
 
 html {
-  width: 1000px;
+  width: 960px;
   /* I intially choose these two fonts for our main fonts. */
   /* font-family: 'EB Garamond', serif; */
   font-family: 'Open Sans', sans-serif;
@@ -24,6 +24,17 @@ h1{
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color:#7BCCC4;
 }
+
+
+h2{ 
+    text-align: center;
+  font-family: 'Mr Dafoe', cursive;
+  font-size: 35px;
+  -webkit-text-fill-color:whitesmoke;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color:#7BCCC4;
+  margin-top:1em;
+    }
 
 .navigation-bar{
   height: 200px;
@@ -53,6 +64,7 @@ h1{
 
 .navigation-bar img{
 width: 150%;
+vertical-align: middle;
 
 }
 
@@ -72,9 +84,15 @@ width: 150%;
 
 
 footer{
+
+  margin-top: 7em;
+  position:relative;
+  text-align:center;
+
   margin-top: 22em;
   position:relative;
   text-align:center;
+
 
 }
 
@@ -85,6 +103,9 @@ footer{
   border-right: 2px solid #FCC5C0;
   bottom: 0px;
   top:3px;
+
+
+
 
 }
 
