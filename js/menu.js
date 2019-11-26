@@ -5,7 +5,6 @@ var shoppingCart = new Cart([]);
 
 var parentElement = document.getElementById('flavors');
 var addToCartBtns = document.getElementsByClassName('addToCartBtn');
-// var checkoutBtn = document.getElementById('checkoutBtn');
 
 // Display all the flavor stored in an array to the page
 function displayMenu() {
@@ -37,7 +36,6 @@ function displayMenu() {
 
 
 function addToCartBtnHandler(event) {
-  console.log('addToCartBtnHandler');
   event.preventDefault();
   var iceCreamName = event.target.id;
   shoppingCart.addItem(iceCreamName);
