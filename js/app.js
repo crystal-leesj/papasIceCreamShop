@@ -93,7 +93,6 @@ Cart.prototype.addItem = function(flavor) {
   console.log('items :', this.items);
 };
 
-
 Cart.prototype.saveToLocalStorage = function() {
   var cartJSON = JSON.stringify(this.items);
   localStorage.setItem('data', cartJSON);

@@ -11,6 +11,7 @@ function addElement(tag, container, text) {
   return element;
 }
 
+// Get the cart data from local storage to disaply on cart page
 function getLocalStorage() {
   var localCartData = JSON.parse(localStorage.getItem('data')) || [];
   // eslint-disable-next-line no-undef
@@ -34,7 +35,6 @@ function displayCart() {
   addElement('td', totalTr, 'Total Price');
   addElement('td', totalTr, '$' + totalPrice);
 }
-
 
 getLocalStorage();
 displayCart();

@@ -32,7 +32,6 @@ function displayMenu() {
     flavorName.textContent = IceCream.allIceCreams[i].name;
     li.appendChild(addToCartBtn);
   }
-
 }
 
 
@@ -41,7 +40,6 @@ function addToCartBtnHandler(event) {
   var iceCreamName = event.target.id;
   shoppingCart.addItem(iceCreamName);
   shoppingCart.saveToLocalStorage();
-
 }
 
 // ref: https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
