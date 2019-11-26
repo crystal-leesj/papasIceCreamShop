@@ -19,7 +19,7 @@ function displayMenu() {
     addToCartBtn.setAttribute('type', 'submit');
     addToCartBtn.setAttribute('value', 'Add To Cart');
     addToCartBtn.className = 'addToCartBtn';
-    addToCartBtn.id = `${IceCream.allIceCreams[i].name}'`;
+    addToCartBtn.id = `${IceCream.allIceCreams[i].name};`;
 
 
     parentElement.appendChild(li);

@@ -8,11 +8,11 @@ html {
 }
 
 #menuContainer main {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 #menuContainer h2 {
-  margin: 10px;
+  margin: 20px;
 }
 
 #menuContainer h4 {
@@ -21,6 +21,7 @@ html {
 
 #menuContainer p {
   text-indent: 50px;
+  margin: 5px;
 }
 
 #flavors {
@@ -43,7 +44,6 @@ html {
   z-index: 100;
   /* position: absolute; */
   color:white;
-
 }
 
 #flavors li input {
@@ -56,13 +56,16 @@ html {
   margin-right: 120px;
   margin-top: -25px;
   border-radius: 8px;
-
 }
 
 #flavors li input:hover {
   background-color: gray; /* Green */
   color: white;
   border: 2px solid #e7e7e7;
+}
+
+section {
+  margin-bottom: 200px;
 }
 
 #checkout {
@@ -75,4 +78,10 @@ html {
   border-radius: 8px;
   padding: 15px;
   margin-top: 30px;
+  margin: 100px 100px;
+}
+
+
+footer {
+  margin-top: 100px;
 }
