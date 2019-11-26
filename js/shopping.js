@@ -19,6 +19,16 @@ function getLocalStorage() {
   console.log('localCartData :', shoppingCart);
 }
 
+function clearCart() {
+  cartContainer.innerHTML = '';
+}
+
+function renderCart() {
+  getLocalStorage();
+  clearCart();
+  displayCart();
+}
+
 function displayCart() {
   var totalPrice = 0;
   var tableElem = addElement('table', cartContainer);
@@ -36,5 +46,4 @@ function displayCart() {
   addElement('td', totalTr, '$' + totalPrice);
 }
 
-getLocalStorage();
-displayCart();
+renderCart();
