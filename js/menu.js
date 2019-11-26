@@ -26,7 +26,7 @@ function displayMenu() {
     addToCartBtn.setAttribute('type', 'submit');
     addToCartBtn.setAttribute('value', 'Add To Cart');
     addToCartBtn.className = 'addToCartBtn';
-    addToCartBtn.id = `${IceCream.allIceCreams[i].name};`;
+    addToCartBtn.id = `${IceCream.allIceCreams[i].name}`;
 
     parentElement.appendChild(li);
     li.appendChild(imageDiv);
@@ -54,6 +54,7 @@ function mouseOverHandler(e) {
   {
     descriptionElem.setAttribute('style', 'display: block;');
   }
+  console.log(e.target.id);
 }
 
 function mouseOutHandler(e) {
