@@ -58,7 +58,7 @@ function onLocationFound(e) { //this function does three things if the location 
 
   L.marker([47.624425, -122.336591], {icon: myIcon}).addTo(map)
     .bindPopup("<b>Papa's Ice Cream in SLU</b> <br> 590 Terry Ave N <br> Seattle WA 98109 <br> Phone: (206) 995-8296 <br> Store Hours: 7AM - 3PM");
-  //L.circle(e.latlng, radius).addTo(map); // this adds a Leaflet circle to the map at the lat and long returned by the locate function. Its radius is set to the var radius defined above.
+
 
   /*if (radius < 30) {
       L.circle(e.latlng, radius, {color: 'green'}).addTo(map);
