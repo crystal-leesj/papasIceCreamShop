@@ -39,6 +39,7 @@ function addToCartBtnHandler(event) {
   event.preventDefault();
   var iceCreamName = event.target.id;
   shoppingCart.addItem(iceCreamName);
+  console.log('shoppingCart :', shoppingCart);
   shoppingCart.saveToLocalStorage();
 }
 
