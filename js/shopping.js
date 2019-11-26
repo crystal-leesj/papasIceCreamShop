@@ -47,6 +47,7 @@ function displayCart() {
     // Discount is applied when there is 5 or more than 5 ice cream
     if (shoppingCart.items.length >= 5) {
       var discountTr = addElement('tr', tableElem);
+      discountTr.id = 'discount';
       addElement('td', discountTr, '-$10 Discount');
       addElement('td', discountTr, '- $10');
       var discountTaxTr = addElement('tr', tableElem);
