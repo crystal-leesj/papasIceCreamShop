@@ -42,17 +42,17 @@ function addSpecialFlavor(shopLocation) {
 }
 
 // Create an Ice Cream
-new IceCream('Ferrero Rocher', 'Sweet and salty – an unbeatable combination! Our salted caramel is made in-house using just 4 simple ingredients.', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, caramel (milk, cane sugar, vanilla bean, sea salt), locust bean gum.', false, false, 9.50, 'img/ferrero-rocher.jpg');
+new IceCream('Ferrero Rocher', 'Rich and creamy Nutella ice cream loaded with nuts, chocolate and pecans', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, caramel (milk, cane sugar, vanilla bean, sea salt), locust bean gum.', false, false, 9.50, 'img/ferrero-rocher.jpg');
 
-new IceCream('Green Tea', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/green-tea.jpg');
+new IceCream('Green Tea', 'One of our staple flavors, simple and we have mastered this green tea recipe', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/green-tea.jpg');
 
-new IceCream('Himalayan Salted Caramel', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/himalayan-salted-caramel.jpg');
+new IceCream('Himalayan Salted Caramel', 'Our own twist of the classic Salted Caramel, using Himalayan Salt for more balanced between sweet and salty', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/himalayan-salted-caramel.jpg');
 
-new IceCream('Honey Dew', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/honey-dew.jpg');
+new IceCream('Honey Dew Mint', 'Our most popular summer flavor, a refreshing melon flavor with a slight hint of mint', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false,  false, 9.00, 'img/honey-dew.jpg');
 
-new IceCream('Pumpkin Cobbler', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/pumpkin-cobbler.jpg');
+new IceCream('Pumpkin Cobbler', 'Perfect for the holidays, creamy pumpking with crumbs of granola and graham crackers', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false,  false, 9.00, 'img/pumpkin-cobbler.jpg');
 
-new IceCream('Quadruple Chocolate', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false,9.00, 'img/quadruple-chocolate.jpg');
+new IceCream('Quadruple Chocolate', 'The most chocolatey ice cream you will ever have. See the ingredients :)', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false,9.00, 'img/quadruple-chocolate.jpg');
 
 
 
@@ -64,9 +64,9 @@ new Shop('Capitol Hill', '1400 12th Ave, Seattle, WA 98122', ' (206) 420-4587', 
 var belltown = new Shop('Belltown', '2101 7th Ave, Seattle, WA 98119', '(206) 900-8770', '10AM - 10PM');
 
 // Special flavor
-var stickMango = new IceCream('Sticky Mango', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/sticky-mango.jpg');
-var ubeOrio = new IceCream('Ube Cookies N Cream', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/ube-orio.jpg');
-specialFlavors.push(stickMango);
+var stickyMango = new IceCream('Sticky Mango', 'Inspired by tradition Thai dessert, strong flavor of mango with sweet sticky rice chunks', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/sticky-mango.jpg');
+var ubeOrio = new IceCream('Ube Cookies N Cream', 'Inspired by Filipino dessert, purple yam with cookies and cream!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/ube-orio.jpg');
+specialFlavors.push(stickyMango);
 specialFlavors.push(ubeOrio);
 addSpecialFlavor(belltown);
 addSpecialFlavor(southLakeUnion);
