@@ -30,6 +30,10 @@ function Shop(location, address, phone, hours) {
   this.getFlavor();
 }
 
+IceCream.prototype.increaseClickCounter = function(){
+  this.clickCounter++;
+};
+
 Shop.prototype.getFlavor = function () {
   for (var i = 0; i < IceCream.allIceCreams.length; i++) {
     this.flavors.push(IceCream.allIceCreams[i]);
