@@ -4,7 +4,7 @@
   }
 
 html {
-  width: 1000px;
+  width: 960px;
   /* I intially choose these two fonts for our main fonts. */
   /* font-family: 'EB Garamond', serif; */
   font-family: 'Open Sans', sans-serif;
@@ -21,7 +21,7 @@ h1{
 }
 
 .navigation-bar{
-  height: 400px;
+ /* display: inline-flex; */
   width: 100%;
 }
 
@@ -33,31 +33,33 @@ h1{
 }
 
 .navigation-bar li {
-  margin-right:2em;
-  float: left;
+  /* margin-right:1em; */
+  /* float: left; */
   width:60%;
 
 }
 
 
 .navigation-bar div{
-
  position: relative;
  bottom:2em;
+ /* margin-right: 2em; */
 }  
 
 .navigation-bar img{
-width: 80%;
+width: 120%;
+vertical-align: middle;
+
 
 }
 
 .navigation-bar li a { 
-  /* display: block; */
-  /* margin-left: 1px; */
-  color: white;
-  /* text-align: center;
-  padding: 12px 12px; */
-  text-decoration: none;
+display: block;
+margin-left: 1px; 
+color: white;
+text-align: center;
+padding: 12px 12px;
+text-decoration: none;
 }
 
 
@@ -67,7 +69,7 @@ width: 80%;
 
 
 footer{
-  margin-top: 22em;
+  margin-top: 2em;
   position:relative;
   text-align:center;
 
@@ -76,10 +78,11 @@ footer{
 .footerlogo img{
   position:absolute;
   bottom:0;
-  border-left: 2px solid #FCC5C0;
-  border-right: 2px solid #FCC5C0;
+  border-left: 3px solid #FCC5C0;
+  border-right: 3px solid #FCC5C0;
   bottom: 0px;
   top:3px;
+  vertical-align: middle;
 
 }
 
@@ -89,7 +92,7 @@ footer:before {
   width: 100%;
   position: absolute;
   top: 25px;
-  left: 0px;
+  left: 3px;
   z-index: -1;
 }
 
@@ -97,8 +100,8 @@ footer:before {
 .footerElement img {
   /* float:right; */
   margin-top: 30px;
-  margin-right: 2px;
-  margin-left: 2px;
+  margin-right: 10px;
+  margin-left: 10px;
   float:right;
   padding:0px;
   line-height: 50px;
@@ -114,4 +117,11 @@ footer:before {
   margin-top:30px;
   font-size:15px;
   color:grey;
+}
+
+#random_image {
+height: 800px;
+width: 800px;
+display: block;
+
 }
