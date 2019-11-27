@@ -5,44 +5,21 @@ var cartContainer = document.getElementById('cartContainer');
 
 // Helper function to display document elements
 function addElement(tag, container, text) {
-    var element = document.createElement(tag);
-    container.appendChild(element);
-    element.textContent = text;
-    return element;
+  var element = document.createElement(tag);
+  container.appendChild(element);
+  element.textContent = text;
+  return element;
 }
 
 // Get the cart data from local storage to disaply on cart page
 function getLocalStorage() {
-    var localCartData = JSON.parse(localStorage.getItem('data')) || [];
-    // eslint-disable-next-line no-undef
-    shoppingCart = new Cart(localCartData);
-    console.log('localCartData :', shoppingCart);
+  var localCartData = JSON.parse(localStorage.getItem('data')) || [];
+  // eslint-disable-next-line no-undef
+  shoppingCart = new Cart(localCartData);
+  console.log('localCartData :', shoppingCart);
 }
 
 function displayCart() {
-<<<<<<< HEAD
-    var totalPrice = 0;
-    var tableElem = addElement('table', cartContainer);
-    var titleTr = addElement('tr', tableElem);
-    addElement('th', titleTr, 'Ice Cream');
-    addElement('th', titleTr, 'Price');
-    console.log('shoppingCart.items.length:', shoppingCart.items.length);
-    if (shoppingCart.items.length === 0) {
-        var noneTotalTr = addElement('tr', tableElem);
-        addElement('td', totalTr, 'Total Price');
-        addElement('td', totalTr, '$0' + noneTotalTr);
-    } else {
-        for (var i = 0; i < shoppingCart.items.length; i++) {
-            var contentTr = addElement('tr', tableElem);
-            addElement('td', contentTr, `${shoppingCart.items[i].flavor}`);
-            addElement('td', contentTr, '$' + `${shoppingCart.items[i].price}`);
-            totalPrice += shoppingCart.items[i].price;
-        }
-        var totalTr = addElement('tr', tableElem);
-        addElement('td', totalTr, 'Total Price');
-        addElement('td', totalTr, '$' + totalPrice);
-    }
-=======
   var totalPrice = 0;
   var tableElem = addElement('table', cartContainer);
   var titleTr = addElement('tr', tableElem);
@@ -81,7 +58,6 @@ function displayCart() {
       addElement('td', discountTotalTr, '$' + (parseFloat(totalPrice)-10+parseFloat(calculatTax(totalPrice))));
     }
   }
->>>>>>> 4b7786fe086c883cd85131e2df71c6d00019c1eb
 }
 
 function calculatTax(price) {
@@ -90,19 +66,15 @@ function calculatTax(price) {
 }
 
 function renderCart() {
-    getLocalStorage();
-    displayCart();
+  getLocalStorage();
+  displayCart();
 }
 
 renderCart();
-console.log("shopping cart type " + shoppingCart.items[0].flavor);
+console.log('shopping cart type ' + shoppingCart.items[0].flavor);
 
 
 
-//create data analysis table 
-
-
-var flavors = ['Ferrero Rocher', 'Green Tea', 'Himalayan Salted Caramel', 'Honey Dew', 'Pumpkin Cobbler', 'Quadruple Chocolate', 'Sticky Mango', 'Ube Cookies N Cream'];
 var counterFerrero = 0;
 var counterGreenTea = 0;
 var counterHimalayan = 0;
@@ -112,83 +84,83 @@ var counterquadruple = 0;
 var counterMango = 0;
 var counterUbe = 0;
 
-console.log(shoppingCart.items.length)
-console.log('shoppingCart.items' + shoppingCart.items.length)
+console.log(shoppingCart.items.length);
+console.log('shoppingCart.items' + shoppingCart.items.length);
 
 for (var i = 0; i < shoppingCart.items.length; i++) {
 
 
-    if (shoppingCart.items[i].flavor == 'Ferrero Rocher') {
-        counterFerrero++;
-    }
-    else if (shoppingCart.items[i].flavor == 'Green Tea') {
-        counterGreenTea++
-    }
-    else if (shoppingCart.items[i].flavor == 'Himalayan Salted Caramel') {
-        counterHimalayan++
-    }
-    else if (shoppingCart.items[i].flavor == 'Honey Dew') {
-        counterhoneyDew++
-    }
-    else if (shoppingCart.items[i].flavor == 'Pumpkin Cobbler') {
-        counterPumpkin++
-    }
-    else if (shoppingCart.items[i].flavor == 'Quadruple Chocolate') {
-        counterquadruple++
-    }
-    else if (shoppingCart.items[i].flavor == 'Sticky Mango') {
-        counterMango++
-    }
-    else if (shoppingCart.items[i].flavor == 'Sticky Mango') {
-        counterUbe++
-    }
+  if (shoppingCart.items[i].flavor === 'Ferrero Rocher') {
+    counterFerrero++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Green Tea') {
+    counterGreenTea++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Himalayan Salted Caramel') {
+    counterHimalayan++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Honey Dew') {
+    counterhoneyDew++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Pumpkin Cobbler') {
+    counterPumpkin++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Quadruple Chocolate') {
+    counterquadruple++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Sticky Mango') {
+    counterMango++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Sticky Mango') {
+    counterUbe++;
+  }
 }
 
 myChart();
 function myChart() {
-    var ctx = document.getElementById("myChart");
-    var ctx = document.getElementById("myChart").getContext('2d');
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ['Ferrero Rocher', 'Green Tea', 'Himalayan Salted Caramel', 'Honey Dew', 'Pumpkin Cobbler', 'Quadruple Chocolate', 'Sticky Mango', 'Ube Cookies N Cream'],
-            datasets: [{
-                label: "number of purchases per Item",
-                data: [counterFerrero, counterGreenTea, counterHimalayan, counterhoneyDew, counterPumpkin, counterquadruple, counterMango, counterUbe],
-                backgroundColor: [
-                    'blue',
-                    'blue',
-                    'blue',
-                    'blue',
-                    'blue',
-                    'blue',
-                    'blue',
-                    'blue'
+  var ctx = document.getElementById('myChart').getContext('2d');
+  // eslint-disable-next-line no-undef
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Ferrero Rocher', 'Green Tea', 'Himalayan Salted Caramel', 'Honey Dew', 'Pumpkin Cobbler', 'Quadruple Chocolate', 'Sticky Mango', 'Ube Cookies N Cream'],
+      datasets: [{
+        label: 'number of purchases per Item',
+        data: [counterFerrero, counterGreenTea, counterHimalayan, counterhoneyDew, counterPumpkin, counterquadruple, counterMango, counterUbe],
+        backgroundColor: [
+          'blue',
+          'blue',
+          'blue',
+          'blue',
+          'blue',
+          'blue',
+          'blue',
+          'blue'
 
-                ],
-                borderColor: [
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white',
-                    'white'
-                ],
-                borderWidth: 1
-            }]
+        ],
+        borderColor: [
+          'white',
+          'white',
+          'white',
+          'white',
+          'white',
+          'white',
+          'white',
+          'white'
+        ],
+        borderWidth: 1
+      }]
 
 
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAzero: false
-                    }
-                }]
-            }
-        }
-    });
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAzero: false
+          }
+        }]
+      }
+    }
+  });
 }
