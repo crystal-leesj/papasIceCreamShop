@@ -7,12 +7,16 @@ html {
   width: 960px;
 }
 
+.navigation-bar {
+  height: 180px;
+}
+
 #menuContainer main {
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 #menuContainer h2 {
-  margin: 10px;
+  margin: 0;
 }
 
 #menuContainer h4 {
@@ -20,30 +24,50 @@ html {
 }
 
 #menuContainer p {
-  text-indent: 50px;
+  /* text-indent: 50px; */
+  margin: 5px;
+}
+
+#discount-code {
+  color: rgb(83, 44, 119);
+  text-align: center;
+  font-weight: 600;
+  padding-top: 50px;
 }
 
 #flavors {
-  column-width: 400px;
+  column-width: 300px;
+  height: 1490px;
   list-style-type: none;
 }
 
-#flavors li img {
+
+.image {
   margin: 20px;
   border-radius: 8px;
   width: 300px;
   height: 300px;
-  /* position: absolute; */
-  transition: .5s ease;
-  backface-visibility: hidden;
 }
 
-#flavors li p {
+.divClass {
+  position: relative;
+  width: fit-content;
+}
+
+.descriptionClass {
   display: none;
   z-index: 100;
-  /* position: absolute; */
-  color:white;
-
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  color: white;
+  font-weight: bold;
+  font-size:14px;
+  width: 280px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 #flavors li input {
@@ -53,10 +77,9 @@ html {
   border: 2px solid #e7e7e7;
   padding: 5px 10px;
   float: right;
-  margin-right: 120px;
+  margin-right: 60px;
   margin-top: -25px;
   border-radius: 8px;
-
 }
 
 #flavors li input:hover {
@@ -65,7 +88,12 @@ html {
   border: 2px solid #e7e7e7;
 }
 
+section {
+  margin-bottom: 200px;
+}
+
 #checkout {
+  
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
@@ -74,16 +102,31 @@ html {
   float: right;
   border-radius: 8px;
   padding: 15px;
-  margin-top: 30px;
+  margin-top: 100px;
 }
 
-table {
-  margin: 0 auto;
-  width: 300px;
+footer {
+  margin-top: 100px;
 }
 
-table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
+button {
+  padding: 14px 40px;
+  background-color: rgb(41, 98, 121);
+  border: none;
+  color: white;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 300px;
+  margin-top: 50px;
 }
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:hover {background-color: #579c99;}

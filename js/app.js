@@ -85,6 +85,7 @@ function Cart(items) {
 }
 
 Cart.prototype.addItem = function(flavor) {
+  console.log('addItem');
   for (var i = 0; i < IceCream.allIceCreams.length; i++) {
     if (flavor === IceCream.allIceCreams[i].name) {
       var price = IceCream.allIceCreams[i].price;
