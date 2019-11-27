@@ -50,7 +50,7 @@ function mouseOverHandler(e) {
   var iceCreamDescriptionNum = e.target.id.charAt(e.target.id.length - 1);
   var descriptionId = 'description' + iceCreamDescriptionNum;
   var descriptionElem = document.getElementById(descriptionId);
-  console.log(descriptionId);
+  // console.log(descriptionId);
   if(descriptionElem) {
     descriptionElem.setAttribute('style', 'display: block;');
   }
@@ -60,7 +60,7 @@ function mouseOutHandler(e) {
   var iceCreamDescriptionNum = e.target.id.charAt(e.target.id.length - 1);
   var descriptionId = 'description' + iceCreamDescriptionNum;
   var descriptionElem = document.getElementById(descriptionId);
-  console.log(descriptionId);
+  // console.log(descriptionId);
   if(descriptionElem){
     descriptionElem.setAttribute('style', 'display: none;');
   }
@@ -79,6 +79,7 @@ function addToCartBtnHandler(event) {
   var iceCreamName = event.target.id;
   shoppingCart.addItem(iceCreamName);
   console.log('**shoppingCart :', shoppingCart);
+  displayCartItem();
   shoppingCart.saveToLocalStorage();
 }
 
@@ -88,6 +89,30 @@ for(var button = 0; button < addToCartBtns.length; button++) {
 }
 // var iceCreamForm = document.getElementById('iceCreamForm');
 // iceCreamForm.addEventListener('click', addToCartBtnHandler);
+
+window.onscroll = function() {displayOnScroll();};
+
+var header = document.getElementById('myHeader');
+var sticky = header.offsetTop;
+
+function displayOnScroll() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+}
+
+function displayCartItem() {
+  var onscollItemList = document.createElement('ol');
+  var onscollItem = document.createElement('li');
+  header.appendChild(onscollItemList);
+  for (var i = 0; i < shoppingCart.items.length; i++) {
+    onscollItemList.appendChild(onscollItem);
+    onscollItem.textContent = (i+1) + '. ' + `${shoppingCart.items[i].flavor}`;
+  }
+}
+
 
 
 

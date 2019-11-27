@@ -130,3 +130,39 @@ button a {
 }
 
 button:hover {background-color: #579c99;}
+
+
+.header {
+  padding: 20px 16px;
+  background: #555;
+  color: #f1f1f1;
+  margin-top: 30px;
+  z-index: 100;
+  width: 960px;
+}
+
+#menuContainer {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  /* width: 100%; */
+  width: 960px;
+}
+
+.sticky + #menuContainer {
+  padding-top: 102px;
+}
+
+#myHeader h2 {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+#myHeader li {
+  display: inline-block;
+  text-align: center;
+  padding-left: 300px;
+}
