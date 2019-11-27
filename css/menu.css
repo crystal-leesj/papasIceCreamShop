@@ -108,3 +108,25 @@ section {
 footer {
   margin-top: 100px;
 }
+
+button {
+  padding: 14px 40px;
+  background-color: rgb(41, 98, 121);
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2em;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin-left: 300px;
+  margin-top: 50px;
+}
+
+button a {
+  text-decoration: none;
+  color: white;
+}
+
+button:hover {background-color: #579c99;}
