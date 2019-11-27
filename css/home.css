@@ -33,9 +33,8 @@ h1{
 }
 
 .navigation-bar li {
-  /* margin-right:1em; */
-  /* float: left; */
-  width:60%;
+  
+  width:80%;
 
 }
 
@@ -43,12 +42,10 @@ h1{
 .navigation-bar div{
  position: relative;
  bottom:2em;
- /* margin-right: 2em; */
 }  
 
 .navigation-bar img{
-width: 120%;
-vertical-align: middle;
+width: 100%;
 
 
 }
