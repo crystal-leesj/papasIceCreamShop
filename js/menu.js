@@ -86,8 +86,8 @@ function addToCartBtnHandler(event) {
 for(var button = 0; button < addToCartBtns.length; button++) {
   addToCartBtns[button].addEventListener('click', addToCartBtnHandler, false);
 }
-var iceCreamForm = document.getElementById('iceCreamForm');
-iceCreamForm.addEventListener('click', addToCartBtnHandler);
+// var iceCreamForm = document.getElementById('iceCreamForm');
+// iceCreamForm.addEventListener('click', addToCartBtnHandler);
 
 
 
