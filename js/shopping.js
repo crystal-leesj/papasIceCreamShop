@@ -157,7 +157,7 @@ function myChart() {
       scales: {
         yAxes: [{
           ticks: {
-            beginAzero: false
+            beginAzero: true
           }
         }]
       }
