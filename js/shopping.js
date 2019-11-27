@@ -128,25 +128,25 @@ function myChart() {
         label: 'number of purchases per Item',
         data: [counterFerrero, counterGreenTea, counterHimalayan, counterhoneyDew, counterPumpkin, counterquadruple, counterMango, counterUbe],
         backgroundColor: [
-          'blue',
-          'blue',
-          'blue',
-          'blue',
-          'blue',
-          'blue',
-          'blue',
-          'blue'
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4'
 
         ],
         borderColor: [
-          'white',
-          'white',
-          'white',
-          'white',
-          'white',
-          'white',
-          'white',
-          'white'
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0'
         ],
         borderWidth: 1
       }]
