@@ -12,28 +12,30 @@
     <h1>Papa's Ice Cream</h1>
     <div class='navigation-bar'>
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a class="active" href="menu.html">Flavors</a></li>
-        <li><div><img src="img/logo.png" alt="icecream-logo"></div></li> 
-        <li><a href="cart.html">Cart</a></li>
-        <li><a href="location.html">Locations</a></li>
+        <li><a href="/papasIceCreamShop">Home</a></li>
+        <li><a class="active" href="/papasIceCreamShop/menu.html">Flavors</a></li>
+        <li><a href="/papasIceCreamShop"><div><img src="img/logo.png" alt="icecream-logo"></a></div></li>
+        <li><a href="/papasIceCreamShop/cart.html">Cart</a></li>
+        <li><a href="/papasIceCreamShop/location.html">Locations</a></li>
       </ul>
     </div>
+    <div class="header" id="myHeader">
+      <h2>Ice Cream Cart</h2>
+    </div>
     <main id="menuContainer">
-      <h2>Our Flavors</h2>
-      <p>In Papa's Ice Cream Shop, we do not have rules when inventing new flavors. All we strive for is to have the smoothest, creamiest, tastiest ice cream your mouth will ever experience! Trust us, we have been doing this for over two decades.
-      </p>
+      <h2 id='discount-code'>Buy 5 Ice Cream you get $10 discount!</h2>
+      <h2>Flavors</h2>
+      <p>In Papa's Ice Cream Shop, we do not have rules when inventing new flavors. All we strive for is to have the smoothest, creamiest, tastiest ice cream your mouth will ever experience! Trust us, we have been doing this for over two decades.</p>
       <section>
-        <form action="iceCreamForm">
-            <ul id="flavors">
-            </ul>
+        <form id="iceCreamForm">
+          <ul id="flavors">
+          </ul>
         </form>
-       <button id="checkout" type="button">Proceed to checkout</button>
+        <button id="checkoutBtn" type="button"><a href="/papasIceCreamShop/cart.html">Proceed to checkout</a></button>
       </section>
-
       <article>
         <h2>Our Ingredients</h2>
-        <p>We only use the freshest and 100% organic ingredients, locally sourced from small farmers. If we can't get an ingredient fresh, we don't make that flavor till we get it fresh. </p>
+        <p>We only use the freshest and 100% organic ingredients, locally sourced from small farmers. If we can't get an ingredient fresh, we don't make that flavor till we get it fresh.</p>
       </article>
     </main>
     <footer>
@@ -41,7 +43,7 @@
         <img src="img/logo.png" alt="ice-cream-logo" height="50" width="50"> 
       </div>
       <div class="leftbox">
-        <p> created by:Papa's Team</p>
+        <p> created by: Papa's Team</p>
       </div>
       <div class='footerElement'>
         <img src="img/facebook.png" alt="facebook" height="35" width="35">

@@ -30,9 +30,7 @@ h2{
   text-align: center;
   font-family: 'Lobster', cursive;
   font-size: 35px;
-  -webkit-text-fill-color:whitesmoke;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color:#7BCCC4;
+  -webkit-text-fill-color:#7BCCC4;
   margin-top:1em;
     }
 

@@ -71,3 +71,96 @@ function renderCart() {
 }
 
 renderCart();
+console.log('shopping cart type ' + shoppingCart.items[0].flavor);
+
+
+
+var counterFerrero = 0;
+var counterGreenTea = 0;
+var counterHimalayan = 0;
+var counterhoneyDew = 0;
+var counterPumpkin = 0;
+var counterquadruple = 0;
+var counterMango = 0;
+var counterUbe = 0;
+
+console.log(shoppingCart.items.length);
+console.log('shoppingCart.items' + shoppingCart.items.length);
+
+for (var i = 0; i < shoppingCart.items.length; i++) {
+
+
+  if (shoppingCart.items[i].flavor === 'Ferrero Rocher') {
+    counterFerrero++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Green Tea') {
+    counterGreenTea++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Himalayan Salted Caramel') {
+    counterHimalayan++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Honey Dew') {
+    counterhoneyDew++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Pumpkin Cobbler') {
+    counterPumpkin++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Quadruple Chocolate') {
+    counterquadruple++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Sticky Mango') {
+    counterMango++;
+  }
+  else if (shoppingCart.items[i].flavor === 'Sticky Mango') {
+    counterUbe++;
+  }
+}
+
+myChart();
+function myChart() {
+  var ctx = document.getElementById('myChart').getContext('2d');
+  // eslint-disable-next-line no-undef
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Ferrero Rocher', 'Green Tea', 'Himalayan Salted Caramel', 'Honey Dew', 'Pumpkin Cobbler', 'Quadruple Chocolate', 'Sticky Mango', 'Ube Cookies N Cream'],
+      datasets: [{
+        label: 'number of purchases per Item',
+        data: [counterFerrero, counterGreenTea, counterHimalayan, counterhoneyDew, counterPumpkin, counterquadruple, counterMango, counterUbe],
+        backgroundColor: [
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4',
+          '#7BCCC4'
+
+        ],
+        borderColor: [
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0',
+          '#FCC5C0'
+        ],
+        borderWidth: 1
+      }]
+
+
+    },
+    options: {
+      scales: {
+        yAxes: [{
+          ticks: {
+            beginAzero: true
+          }
+        }]
+      }
+    }
+  });
+}
