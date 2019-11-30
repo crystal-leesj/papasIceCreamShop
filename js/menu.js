@@ -1,6 +1,7 @@
 'use strict';
 
 var parentElement = document.getElementById('flavors');
+var addToCartBtns = document.getElementsByClassName('addToCartBtn');
 
 // Function Invocation
 
