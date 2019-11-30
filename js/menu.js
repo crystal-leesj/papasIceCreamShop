@@ -3,14 +3,8 @@
 var parentElement = document.getElementById('flavors');
 var addToCartBtns = document.getElementsByClassName('addToCartBtn');
 
-// Function Invocation
 
 displayMenu();
-
-//Global Function
-
-displayMenu();
-
 // Display all the flavor stored in an array to the page
 function displayMenu() {
   for(var i = 0; i < IceCream.allIceCreams.length; i++) {
@@ -48,7 +42,6 @@ function displayMenu() {
     // li.appendChild(flavorDescription);
     // flavorDescription.textContent = IceCream.allIceCreams[i].description;
   }
-
 }
 
 function mouseOverHandler(e) {
