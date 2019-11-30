@@ -57,27 +57,49 @@ new IceCream('Quadruple Chocolate', 'The most chocolatey ice cream you will ever
 
 
 
-
-
-
-
 // Create a Shop
 var southLakeUnion = new Shop('South Lake Union', '590 Terry Ave N, Seattle, WA 98109', '(206) 995-8296', '7AM - 3PM');
 
-var capitolHill = new Shop('Capitol Hill', '1400 12th Ave, Seattle, WA 98122', ' (206) 420-4587', '1PM - 11PM');
+new Shop('Capitol Hill', '1400 12th Ave, Seattle, WA 98122', ' (206) 420-4587', '1PM - 11PM');
 
 var belltown = new Shop('Belltown', '2101 7th Ave, Seattle, WA 98119', '(206) 900-8770', '10AM - 10PM');
 
 // Special flavor
-var stickyMango = new IceCream('Sticky Mango', 'Inspired by tradition Thai dessert, strong flavor of mango with sweet sticky rice chunks', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/sticky-mango.jpg');
-var ubeOrio = new IceCream('Ube Cookies N Cream', 'Inspired by Filipino dessert, purple yam with cookies and cream!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/ube-orio.jpg');
-specialFlavors.push(stickyMango);
+var stickMango = new IceCream('Sticky Mango', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/sticky-mango.jpg');
+var ubeOrio = new IceCream('Ube Cookies N Cream', 'Inspired by Spring days in Portland when flowers pop and trees start to bloom. We combine local honey and organic lavender with lemon cookies for an extra refreshing Spring time flavor combination!', 'Rbst-free fresh cream & milk, non-fat milk solids, organic sugar, egg yolks, honey, lavender flowers, lavender oil, locust bean gum', false, false, 9.00, 'img/ube-orio.jpg');
+specialFlavors.push(stickMango);
 specialFlavors.push(ubeOrio);
-
 addSpecialFlavor(belltown);
 addSpecialFlavor(southLakeUnion);
 
-console.log('belltown :', belltown);
-console.log('southLakeUnion :', southLakeUnion);
-console.log('capitolHill :', capitolHill);
+// console.log('belltown :', belltown);
+// console.log('southLakeUnion :', southLakeUnion);
+// console.log('capitolHill :', capitolHill);
+
+
+function Cart(items) {
+  this.items = items;
+}
+
+Cart.prototype.addItem = function(flavor) {
+  for (var i = 0; i < IceCream.allIceCreams.length; i++) {
+    if (flavor === IceCream.allIceCreams[i].name) {
+      var price = IceCream.allIceCreams[i].price;
+      var newCartItem = new CartItem(flavor, price);
+      console.log('newCartItem: ',newCartItem);
+    }
+  }
+  this.items.push(newCartItem);
+};
+
+Cart.prototype.saveToLocalStorage = function() {
+  var cartJSON = JSON.stringify(this.items);
+  localStorage.setItem('data', cartJSON);
+};
+
+
+function CartItem(flavor, price) {
+  this.flavor = flavor;
+  this.price = price;
+}
 
