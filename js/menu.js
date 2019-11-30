@@ -1,17 +1,18 @@
 'use strict';
 
-// eslint-disable-next-line no-undef
-var shoppingCart = new Cart([]);
-
 var parentElement = document.getElementById('flavors');
-var addToCartBtns = document.getElementsByClassName('addToCartBtn');
+
+// Function Invocation
+
+displayMenu();
+
+//Global Function
 
 displayMenu();
 
 // Display all the flavor stored in an array to the page
 function displayMenu() {
-  // eslint-disable-next-line no-undef
-  for (var i = 0; i < IceCream.allIceCreams.length; i++) {
+  for(var i = 0; i < IceCream.allIceCreams.length; i++) {
     var li = document.createElement('li');
     var imageDiv = document.createElement('div');
     var flavorImg = document.createElement('img');
@@ -24,26 +25,29 @@ function displayMenu() {
     flavorImg.className = 'image';
     flavorDescription.id = 'description' + i;
     flavorDescription.className = 'descriptionClass';
+
     addToCartBtn.setAttribute('type', 'button');
     addToCartBtn.setAttribute('value', 'Add To Cart');
     addToCartBtn.className = 'addToCartBtn';
-    // eslint-disable-next-line no-undef
     addToCartBtn.id = `${IceCream.allIceCreams[i].name}`;
-
 
     parentElement.appendChild(li);
     li.appendChild(imageDiv);
     imageDiv.appendChild(flavorImg);
     imageDiv.appendChild(flavorDescription);
+    
     // eslint-disable-next-line no-undef
     flavorImg.src = IceCream.allIceCreams[i].imgUrl;
     li.appendChild(flavorName);
-    // eslint-disable-next-line no-undef
     flavorName.textContent = IceCream.allIceCreams[i].name;
     // eslint-disable-next-line no-undef
     flavorDescription.textContent = IceCream.allIceCreams[i].description;
     li.appendChild(addToCartBtn);
+    // li.appendChilda addToCartBtn);
+    // li.appendChild(flavorDescription);
+    // flavorDescription.textContent = IceCream.allIceCreams[i].description;
   }
+
 }
 
 function mouseOverHandler(e) {
@@ -72,7 +76,8 @@ for(var i = 0; i < arrayOfImages.length; i++){
   arrayOfImages[i].addEventListener('mouseover', mouseOverHandler);
   arrayOfImages[i].addEventListener('mouseout', mouseOutHandler);
 }
-
+// document.getElementsByClassName('image').addEventListener('mouseover', mouseOverHandler);
+// document.getElementsByClassName('image').addEventListener('mouseout', mouseOutHandler);
 
 function addToCartBtnHandler(event) {
   event.preventDefault();
@@ -112,7 +117,4 @@ function displayCartItem() {
     onscollItem.textContent = (i+1) + '. ' + `${shoppingCart.items[i].flavor}`;
   }
 }
-
-
-
 
