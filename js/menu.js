@@ -1,13 +1,17 @@
 'use strict';
 
+// eslint-disable-next-line no-undef
+var shoppingCart = new Cart([]);
+
 var parentElement = document.getElementById('flavors');
 var addToCartBtns = document.getElementsByClassName('addToCartBtn');
 
-
 displayMenu();
+
 // Display all the flavor stored in an array to the page
 function displayMenu() {
-  for(var i = 0; i < IceCream.allIceCreams.length; i++) {
+  // eslint-disable-next-line no-undef
+  for (var i = 0; i < IceCream.allIceCreams.length; i++) {
     var li = document.createElement('li');
     var imageDiv = document.createElement('div');
     var flavorImg = document.createElement('img');
@@ -30,7 +34,7 @@ function displayMenu() {
     li.appendChild(imageDiv);
     imageDiv.appendChild(flavorImg);
     imageDiv.appendChild(flavorDescription);
-    
+
     // eslint-disable-next-line no-undef
     flavorImg.src = IceCream.allIceCreams[i].imgUrl;
     li.appendChild(flavorName);
@@ -38,53 +42,21 @@ function displayMenu() {
     // eslint-disable-next-line no-undef
     flavorDescription.textContent = IceCream.allIceCreams[i].description;
     li.appendChild(addToCartBtn);
-    // li.appendChilda addToCartBtn);
-    // li.appendChild(flavorDescription);
-    // flavorDescription.textContent = IceCream.allIceCreams[i].description;
   }
 }
 
-function mouseOverHandler(e) {
-  var iceCreamDescriptionNum = e.target.id.charAt(e.target.id.length - 1);
-  var descriptionId = 'description' + iceCreamDescriptionNum;
-  var descriptionElem = document.getElementById(descriptionId);
-  // console.log(descriptionId);
-  if(descriptionElem) {
-    descriptionElem.setAttribute('style', 'display: block;');
-  }
-}
-
-function mouseOutHandler(e) {
-  var iceCreamDescriptionNum = e.target.id.charAt(e.target.id.length - 1);
-  var descriptionId = 'description' + iceCreamDescriptionNum;
-  var descriptionElem = document.getElementById(descriptionId);
-  // console.log(descriptionId);
-  if(descriptionElem){
-    descriptionElem.setAttribute('style', 'display: none;');
-  }
-}
-
-var arrayOfImages = document.getElementsByClassName('image');
-
-for(var i = 0; i < arrayOfImages.length; i++){
-  arrayOfImages[i].addEventListener('mouseover', mouseOverHandler);
-  arrayOfImages[i].addEventListener('mouseout', mouseOutHandler);
-}
-// document.getElementsByClassName('image').addEventListener('mouseover', mouseOverHandler);
-// document.getElementsByClassName('image').addEventListener('mouseout', mouseOutHandler);
 
 function addToCartBtnHandler(event) {
   event.preventDefault();
   var iceCreamName = event.target.id;
   shoppingCart.addItem(iceCreamName);
-  console.log('**shoppingCart :', shoppingCart);
-  displayCartItem();
+  console.log('shoppingCart :', shoppingCart);
   shoppingCart.saveToLocalStorage();
 }
 
 // ref: https://stackoverflow.com/questions/19655189/javascript-click-event-listener-on-class
-for(var button = 0; button < addToCartBtns.length; button++) {
-  addToCartBtns[button].addEventListener('click', addToCartBtnHandler, false);
+for(var i = 0; i < addToCartBtns.length; i++) {
+  addToCartBtns[i].addEventListener('click', addToCartBtnHandler, false);
 }
 // var iceCreamForm = document.getElementById('iceCreamForm');
 // iceCreamForm.addEventListener('click', addToCartBtnHandler);
